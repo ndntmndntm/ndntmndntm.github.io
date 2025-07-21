@@ -1,6 +1,6 @@
 # Site settings
 title: "Zalupa kakaya-to"
 url: "https://ndntmndntm.github.io/"
-baseurl: "/wow" 
+baseurl: "" 
 markdown: kramdown
 permalink: /:title
