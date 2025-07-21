@@ -3,7 +3,7 @@
 :root {
     --spacing: 32px;
     --main-bg-color: #1b1b1b;
-    --second-bg-color: 4e4e4e;
+    --second-bg-color: #4e4e4e;
     --main-color: #fefefe;
     --main-font-family: "Fira Sans", Arial;
     --main-font-size: 16px;
@@ -55,13 +55,18 @@ body {
 }
 
 .wacopy-btn {
-    padding: 5px;
+    padding: 10px;
 }
 
 .wacopy-div {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 16px 0;
+}
+
+.wacopy-div:hover {
+    background-color: var(--second-bg-color);
 }
 
 li {
@@ -82,5 +87,5 @@ a:visited {
 
 table, th, td {
   border-collapse: collapse;
-  border: 2px wheat solid;
+  border: 3px wheat solid;
 }
