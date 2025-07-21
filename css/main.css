@@ -1,4 +1,53 @@
-.button:hover {
-    color: white;
-    background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --spacing: 32px;
+    --main-bg-color: #1b1b1b;
+    --second-bg-color: 4e4e4e;
+    --main-color: #fefefe;
+    --main-font-family: "Fira Sans", Arial;
+    --main-font-size: 16px;
+    --width: 1366px;
+    --min-width: 720px;
+}
+
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    background-color: var(--main-bg-color);
+    color: var(--main-color);
+    font-family: var(--main-font-family);
+    font-size: var(--main-font-size);
+    font-style: normal;
+    font-weight: normal;
+}
+
+.wrapper {
+    max-width: -webkit-calc(var(--width) - (var(--spacing) * 2));
+    max-width:         calc(var(--width) - (var(--spacing) * 2));
+    min-width: var(--min-width);
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: var(--spacing);
+    padding-left: var(--spacing);
 }
