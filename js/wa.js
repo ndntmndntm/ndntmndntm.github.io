@@ -57,8 +57,10 @@ function pushWA(filename, wa) {
     btn.setAttribute("onclick", `copy2clipboard("${filename}")`);
     btn.setAttribute("class", "wacopy-btn");
     div.appendChild(btn);
-    const waupdate = document.getElementById("wa-update");
-    waupdate.append(div);
+    const waupdate = document.getElementById("weakauras");
+    const wrapper = document.createElement("li");
+    wrapper.appendChild(div);
+    waupdate.appendChild(wrapper);
 }
 
 function loadWeakAuras() {
