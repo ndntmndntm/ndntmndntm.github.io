@@ -1,7 +1,7 @@
 let WA = {};
 
 let filenames = []
-
+let loaded = 0;
 const mwapath = "/static/wa/merfin/";
 const mwa = `anchors.txt
 dk.txt
@@ -63,6 +63,12 @@ function pushWA(filename, wa) {
     const wrapper = document.createElement("li");
     wrapper.appendChild(div);
     waupdate.appendChild(wrapper);
+
+    loaded++;
+
+    if (loaded == filenames.length) {
+        sortWA();
+    }
 }
 
 function sortWA() {
@@ -103,5 +109,3 @@ function copy2clipboard(idx) {
 initWAFilenames(mwapath, mwa);
 initWAFilenames(fwapath, fwa);
 loadWeakAuras();
-
-setTimeout(sortWA, 1500);
