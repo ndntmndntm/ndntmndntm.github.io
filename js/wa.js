@@ -77,7 +77,7 @@ function sortWA() {
     weakaurasElement.innerHTML = '';
 
     listItems.forEach(item => {
-        fruitList.appendChild(item);
+        weakaurasElement.appendChild(item);
     });
 }
 
