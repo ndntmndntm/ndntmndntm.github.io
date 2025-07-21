@@ -33,7 +33,7 @@ function generateWAName(filename) {
 }
 
 function pushWA(filename, wa) {
-    WA[filename] = text;
+    WA[filename] = wa;
     const div = document.createElement("div");
     div.appendChild(document.createTextNode(generateWAName(filename)));
     const btn = document.createElement("button");
