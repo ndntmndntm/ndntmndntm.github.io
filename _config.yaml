@@ -1,7 +1,6 @@
 # Site settings
-title: Zalupa kakaya-to
-baseurl: "/wow" # the subpath of your site, e.g. /blog/
-url: "https://ndntmndntm.github.io/" # the base hostname & protocol for your site
-# Build settings
+title: "Zalupa kakaya-to"
+url: "https://ndntmndntm.github.io/"
+baseurl: "/wow" 
 markdown: kramdown
 permalink: /:title
