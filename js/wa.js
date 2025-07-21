@@ -3,8 +3,7 @@ let WA = {};
 let filenames = []
 
 const mwapath = "/static/wa/merfin/";
-const mwa = `
-anchors.txt
+const mwa = `anchors.txt
 dk.txt
 druid.txt
 general.txt
@@ -21,8 +20,7 @@ t14autoswap.txt
 t14customnotes.txt
 uf.txt
 warlock.txt
-warrior.txt
-`;
+warrior.txt`;
 
 function initMWAFilenames() {
     mwa.split("\n").forEach((e) => filenames.push(mwapath + e));
@@ -36,9 +34,10 @@ function pushWA(filename, wa) {
     WA[filename] = wa;
     const div = document.createElement("div");
     div.appendChild(document.createTextNode(generateWAName(filename)));
+    div.setAttribute("class", "wacopy-div");
     const btn = document.createElement("button");
     btn.textContent = "Copy";
-    btn.setAttribute("onclick", `copy2clipboard(${filename})`);
+    btn.setAttribute("onclick", `copy2clipboard("${filename}")`);
     btn.setAttribute("class", "wacopy-btn");
     div.appendChild(btn);
     const waupdate = document.getElementById("wa-update");

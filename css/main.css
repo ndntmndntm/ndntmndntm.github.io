@@ -44,10 +44,20 @@ body {
 
 .wrapper {
     max-width: -webkit-calc(var(--width) - (var(--spacing) * 2));
-    max-width:         calc(var(--width) - (var(--spacing) * 2));
+    max-width: calc(var(--width) - (var(--spacing) * 2));
     min-width: var(--min-width);
     margin-right: auto;
     margin-left: auto;
     padding-right: var(--spacing);
     padding-left: var(--spacing);
+}
+
+.wacopy-btn {
+    padding: 5px;
+}
+
+.wacopy-div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
