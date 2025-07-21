@@ -13,6 +13,11 @@ mage.txt
 monk.txt
 paladin.txt
 priest.txt
+raidcore.txt
+raidwidgets.txt
+rcd.backend.txt
+rcd.empty.patterns.txt
+rcd.presets.txt
 reminders.txt
 rogue.txt
 shaman.txt
