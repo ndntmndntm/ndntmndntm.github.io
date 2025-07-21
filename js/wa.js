@@ -50,7 +50,9 @@ function generateWAName(filename) {
 function pushWA(filename, wa) {
     WA[filename] = wa;
     const div = document.createElement("div");
-    div.appendChild(document.createTextNode(generateWAName(filename)));
+    const p = document.createElement("p");
+    p.textContent = generateWAName(filename);
+    div.appendChild(p);
     div.setAttribute("class", "wacopy-div");
     const btn = document.createElement("button");
     btn.textContent = "Copy";
@@ -61,6 +63,22 @@ function pushWA(filename, wa) {
     const wrapper = document.createElement("li");
     wrapper.appendChild(div);
     waupdate.appendChild(wrapper);
+}
+
+function sortWA() {
+    const weakaurasElement = document.getElementById('weakauras');
+    const listItems = Array.from(weakaurasElement.getElementsByTagName('li'));
+    function getText(e) {
+        return e.getElementsByTagName("div")[0].getElementsByTagName("p")[0].textContent; // :)
+    }
+
+    listItems.sort((a, b) => getText(a).localeCompare(getText(b)));
+
+    weakaurasElement.innerHTML = '';
+
+    listItems.forEach(item => {
+        fruitList.appendChild(item);
+    });
 }
 
 function loadWeakAuras() {
@@ -85,3 +103,5 @@ function copy2clipboard(idx) {
 initWAFilenames(mwapath, mwa);
 initWAFilenames(fwapath, fwa);
 loadWeakAuras();
+
+setTimeout(sortWA, 1500);
