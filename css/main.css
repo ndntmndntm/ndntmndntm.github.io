@@ -79,3 +79,8 @@ a:hover {
 a:visited {
     color: var(--link-visited-color);
 }
+
+table, th, td {
+  border-collapse: collapse;
+  border: 2px wheat solid;
+}
