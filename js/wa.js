@@ -44,7 +44,7 @@ function initWAFilenames(path, was) {
 }
 
 function generateWAName(filename) {
-    return filename.replace("/static/wa/", "");
+    return filename.replace("/static/wa/", "").replace(".txt", "");
 }
 
 function pushWA(filename, wa) {
