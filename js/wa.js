@@ -25,7 +25,7 @@ warrior.txt
 `;
 
 function initMWAFilenames() {
-    mwa.split(" ").forEach((e) => filenames.push(mwapath + e));
+    mwa.split("\n").forEach((e) => filenames.push(mwapath + e));
 }
 
 function generateWAName(filename) {
@@ -37,7 +37,9 @@ function pushWA(filename, wa) {
     const div = document.createElement("div");
     div.appendChild(document.createTextNode(generateWAName(filename)));
     const btn = document.createElement("button");
+    btn.textContent = "Copy";
     btn.setAttribute("onclick", `copy2clipboard(${filename})`);
+    btn.setAttribute("class", "wacopy-btn");
     div.appendChild(btn);
     const waupdate = document.getElementById("wa-update");
     waupdate.append(div);
