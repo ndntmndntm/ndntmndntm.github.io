@@ -9,6 +9,8 @@
     --main-font-size: 16px;
     --width: 1366px;
     --min-width: 720px;
+    --link-color: #03bafc;
+    --link-visited-color: #b742ff;
 }
 
 
@@ -64,4 +66,16 @@ body {
 
 li {
     list-style-type: none;
+}
+
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--link-color);
+}
+
+a:visited {
+    color: var(--link-visited-color);
 }
