@@ -22,8 +22,25 @@ uf.txt
 warlock.txt
 warrior.txt`;
 
-function initMWAFilenames() {
-    mwa.split("\n").forEach((e) => filenames.push(mwapath + e));
+const fwapath = "/static/wa/fojji/";
+const fwa = `cd.tracker.txt
+class.anchors.txt
+dk.txt
+druid.txt
+dungeon.mop.txt
+essentials.mop.txt
+hunter.txt
+mage.txt
+monk.txt
+paladin.txt
+priest.txt
+rogue.txt
+shaman.txt
+warlock.txt
+warrior.txt`;
+
+function initWAFilenames(path, was) {
+    was.split("\n").forEach((e) => filenames.push(path + e));
 }
 
 function generateWAName(filename) {
@@ -63,5 +80,6 @@ function copy2clipboard(idx) {
     }
 }
 
-initMWAFilenames();
+initWAFilenames(mwapath, mwa);
+initWAFilenames(fwapath, fwa);
 loadWeakAuras();
