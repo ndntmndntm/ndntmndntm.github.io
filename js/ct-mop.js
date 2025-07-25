@@ -52,6 +52,7 @@ function update() {
             item.appendChild(p);
 
             let checkboxes = document.createElement("div");
+            checkboxes.setAttribute("class", "wacopy-div");
             for (const [ik, iv] of Object.entries(v)) {
                 let checkboxWrapper = document.createElement("div");
                 let checkbox = document.createElement("input");
