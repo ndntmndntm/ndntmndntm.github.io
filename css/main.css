@@ -65,6 +65,10 @@ body {
     padding: 2px var(--spacing);
 }
 
+.ct-checkboxes {
+    padding: 2px 32px;
+}
+
 .wacopy-div:hover {
     background-color: var(--second-bg-color);
 }
