@@ -1,0 +1,27 @@
+---
+layout: default
+permalink: /ct
+---
+<h1>Craft Tracker MoP</h1>
+<ul id="ct-mop"></ul>
+<script src="{{ " js/ct-mop.js" | prepend: site.url}}"></script>
+<script src="js/ct-mop.js"></script>
+<div>
+    <input type="text" name="name" id="name">
+    <select name="prof1" id="prof1">
+        <option value="none">-</option>
+        <option value="jwc">Jewelcrafting</option>
+        <option value="alch">Alchemy</option>
+        <option value="ins">Inscription</option>
+    </select>
+    <select name="prof2" id="prof2">
+        <option value="none">-</option>
+        <option value="jwc">Jewelcrafting</option>
+        <option value="alch">Alchemy</option>
+        <option value="ins">Inscription</option>
+    </select>
+    <button id="btn-add" onclick="addCharacter()">Add</button>
+</div>
+<div>
+    <button id="btn-reset" onclick="reset()">Reset</button>
+</div>
