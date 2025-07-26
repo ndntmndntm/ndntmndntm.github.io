@@ -44,10 +44,8 @@ function updatePage() {
     if (states != {}) {
         let sortedKeys = Object.keys(states);
         sortedKeys.sort((a, b) => a.localeCompare(b));
-        console.log(sortedKeys);
         for (const k in sortedKeys) {
             let i = sortedKeys[k];
-            console.log(i, states[i]);
             if (states[i] && states[i] != {}) updateRow(i, states[i]);
         }
     }
@@ -159,10 +157,12 @@ function initUI() {
 }
 
 function updateStates() {
+    const REMOVELIST = ["card"];
     for (const [k, v] of Object.entries(states)) {
         let newKey = k.toUpperCase();
         delete states[k];
         states[newKey] = v;
+        REMOVELIST.forEach(e => delete states[newKey][e]);
     }
 }
 
