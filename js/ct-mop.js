@@ -90,7 +90,7 @@ function makeCheckboxes(k, v) {
     checkboxes.setAttribute("class", "wacopy-div");
     for (const [ik, iv] of Object.entries(v)) {
         let checkboxWrapper = document.createElement("div");
-        checkboxWrapper.setAttribute("class", "ct-checkboxes");
+        checkboxWrapper.setAttribute("class", "ct-checkboxes " + ik);
         let checkbox = document.createElement("input");
         let id = `${k}_${ik}`;
         let label = document.createElement("label");

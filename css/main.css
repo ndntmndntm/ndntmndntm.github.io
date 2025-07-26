@@ -84,6 +84,18 @@ select {
     background-color: var(--second-bg-color);
 }
 
+.gem {
+    background-color: crimson;
+}
+
+.transmute {
+    background-color: #b742ff;
+}
+
+.card {
+    background-color: seagreen;
+}
+
 li {
     list-style-type: none;
 }
