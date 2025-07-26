@@ -44,6 +44,7 @@ function updatePage() {
     if (states != {}) {
         let sortedKeys = Object.keys(states);
         sortedKeys.sort((a, b) => a.localeCompare(b));
+        console.log(sortedKeys);
         for (const k in sortedKeys) {
             console.log(k, states[k]);
             updateRow(k, states[k]);
