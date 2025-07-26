@@ -75,6 +75,11 @@ body {
     width: var(--size);
 }
 
+input,
+select {
+    height: 24px;
+}
+
 .wacopy-div:hover {
     background-color: var(--second-bg-color);
 }
@@ -95,7 +100,9 @@ a:visited {
     color: var(--link-visited-color);
 }
 
-table, th, td {
-  border-collapse: collapse;
-  border: 3px wheat solid;
+table,
+th,
+td {
+    border-collapse: collapse;
+    border: 3px wheat solid;
 }
