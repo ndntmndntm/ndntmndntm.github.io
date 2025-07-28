@@ -12,7 +12,7 @@
     --link-color: #03bafc;
     --link-visited-color: #b742ff;
     --ins-grad: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
-    --tailor-grad: linear-gradient(90deg,rgba(0, 242, 255, 1) 0%, rgba(0, 28, 242, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    --tailor-grad: linear-gradient(90deg, rgba(0, 242, 255, 1) 0%, rgba(0, 28, 242, 1) 50%, rgba(255, 255, 255, 1) 100%);
     --gem-grad: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
     --alch-grad: linear-gradient(90deg, rgba(119, 0, 255, 1) 0%, rgba(255, 107, 238, 1) 50%, rgba(0, 242, 255, 1) 100%);
 }
@@ -92,16 +92,25 @@ select {
     background-color: var(--second-bg-color);
 }
 
+.gem-l,
+.cloth-l,
+.scroll-l,
+.transmute-l {
+    width: fit-content;
+    block-size: fit-content;
+}
+
 .gem {
     background: var(--gem-grad);
     color: transparent;
     background-clip: text;
 }
 
-.gem:has(> input:checked), .gem-l {
+.gem:has(> input:checked),
+.gem-l {
     background: var(--gem-grad);
     color: white;
-    background-clip: content-box;
+    background-clip: border-box;
 }
 
 .transmute {
@@ -110,10 +119,11 @@ select {
     background-clip: text;
 }
 
-.transmute:has(> input:checked), .transmute-l {
+.transmute:has(> input:checked),
+.transmute-l {
     background: var(--alch-grad);
     color: white;
-    background-clip: content-box;
+    background-clip: border-box;
 }
 
 
@@ -123,10 +133,11 @@ select {
     background-clip: text;
 }
 
-.scroll:has(> input:checked), .scroll-l {
+.scroll:has(> input:checked),
+.scroll-l {
     background: var(--ins-grad);
     color: white;
-    background-clip: content-box;
+    background-clip: border-box;
 }
 
 .cloth {
@@ -135,10 +146,11 @@ select {
     background-clip: text;
 }
 
-.cloth:has(> input:checked), .cloth-l {
+.cloth:has(> input:checked),
+.cloth-l {
     background: var(--tailor-grad);
     color: white;
-    background-clip: content-box;
+    background-clip: border-box;
 }
 
 li {
