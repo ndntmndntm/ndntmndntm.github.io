@@ -67,6 +67,7 @@ body {
     justify-content: space-between;
     vertical-align: middle;
     flex-wrap: wrap;
+    font-size: 20px;
     padding: 2px var(--spacing);
 }
 
@@ -74,7 +75,6 @@ body {
     vertical-align: middle;
     border-radius: 5px;
     padding: 0px 24px;
-    font-size: 24px;
 }
 
 .ct-checkbox {
@@ -98,7 +98,7 @@ select {
     background-clip: text;
 }
 
-.gem:has(> input:checked), .geml {
+.gem:has(> input:checked), .gem-l {
     background: var(--gem-grad);
     color: white;
     background-clip: border-box;
@@ -110,7 +110,7 @@ select {
     background-clip: text;
 }
 
-.transmute:has(> input:checked), .geml {
+.transmute:has(> input:checked), .transmute-l {
     background: var(--alch-grad);
     color: white;
     background-clip: border-box;
@@ -123,7 +123,7 @@ select {
     background-clip: text;
 }
 
-.scroll:has(> input:checked), .geml {
+.scroll:has(> input:checked), .scroll-l {
     background: var(--ins-grad);
     color: white;
     background-clip: border-box;
@@ -135,7 +135,7 @@ select {
     background-clip: text;
 }
 
-.cloth:has(> input:checked), .geml {
+.cloth:has(> input:checked), .cloth-l {
     background: var(--tailor-grad);
     color: white;
     background-clip: border-box;
