@@ -11,10 +11,10 @@
     --min-width: 720px;
     --link-color: #03bafc;
     --link-visited-color: #b742ff;
-    --ins-grad: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
-    --tailor-grad: linear-gradient(90deg, rgba(0, 242, 255, 1) 0%, rgba(0, 28, 242, 1) 50%, rgba(255, 255, 255, 1) 100%);
-    --gem-grad: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
-    --alch-grad: linear-gradient(90deg, rgba(119, 0, 255, 1) 0%, rgba(255, 107, 238, 1) 50%, rgba(0, 242, 255, 1) 100%);
+    --ins-grad: linear-gradient(to right, #30e8bf, #ff8235);
+    --tailor-grad: linear-gradient(to right, #1c92d2, #f2fcfe);
+    --gem-grad: linear-gradient(to right, #f953c6, #b91d73);
+    --alch-grad: linear-gradient(to right, #8e2de2, #4a00e0);
 }
 
 
