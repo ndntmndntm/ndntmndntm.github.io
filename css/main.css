@@ -11,6 +11,10 @@
     --min-width: 720px;
     --link-color: #03bafc;
     --link-visited-color: #b742ff;
+    --ins-grad: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    --tailor-grad: linear-gradient(90deg, rgba(0, 183, 255, 1) 0%, rgba(150, 171, 255, 1) 50%, rgba(252, 168, 255, 1) 100%);
+    --gem-grad: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    --alch-grad: linear-gradient(90deg, rgba(119, 0, 255, 1) 0%, rgba(255, 107, 238, 1) 50%, rgba(0, 242, 255, 1) 100%);
 }
 
 
@@ -67,7 +71,7 @@ body {
 
 .ct-checkboxes {
     vertical-align: middle;
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 2px 24px;
 }
 
@@ -87,40 +91,52 @@ select {
 }
 
 .gem {
-    color: rgb(220, 20, 60);
+    background: var(--gem-grad);
+    color: transparent;
+    background-clip: text;
 }
 
 .gem:has(> input:checked) {
-    background-color: rgb(220, 20, 60);
+    background: var(--gem-grad);
     color: white;
+    background-clip: border-box;
 }
 
 .transmute {
-    color: rgb(183, 66, 255);
+    background: var(--alch-grad);
+    color: transparent;
+    background-clip: text;
 }
 
 .transmute:has(> input:checked) {
-    background-color: rgb(183, 66, 255);
+    background: var(--alch-grad);
     color: white;
+    background-clip: border-box;
 }
 
 
 .scroll {
-    color: rgb(46, 139, 87);
+    background: var(--ins-grad);
+    color: transparent;
+    background-clip: text;
 }
 
 .scroll:has(> input:checked) {
-    background-color: rgb(46, 139, 87);
+    background: var(--ins-grad);
     color: white;
+    background-clip: border-box;
 }
 
 .cloth {
-    color: rgb(0, 206, 209);
+    background: var(--tailor-grad);
+    color: transparent;
+    background-clip: text;
 }
 
 .cloth:has(> input:checked) {
-    background-color: rgb(0, 206, 209);
+    background: var(--tailor-grad);
     color: white;
+    background-clip: border-box;
 }
 
 li {
