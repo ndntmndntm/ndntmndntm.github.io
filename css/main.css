@@ -87,40 +87,40 @@ select {
 }
 
 .gem {
-    color: rgb(35, 235, 195);
-    mix-blend-mode: difference;
+    color: rgb(220, 20, 60);
 }
 
 .gem:has(> input:checked) {
     background-color: rgb(220, 20, 60);
+    color: white;
 }
 
 .transmute {
-    color: rgb(72, 190, 0);
-    mix-blend-mode: difference;
+    color: rgb(183, 66, 255);
 }
 
 .transmute:has(> input:checked) {
     background-color: rgb(183, 66, 255);
+    color: white;
 }
 
 
 .scroll {
-    color: rgb(210, 115, 170);
-    mix-blend-mode: difference;
+    color: rgb(46, 139, 87);
 }
 
 .scroll:has(> input:checked) {
     background-color: rgb(46, 139, 87);
+    color: white;
 }
 
 .cloth {
-    color: rgb(255, 50, 45);
-    mix-blend-mode: difference;
+    color: rgb(0, 206, 209);
 }
 
 .cloth:has(> input:checked) {
     background-color: rgb(0, 206, 209);
+    color: white;
 }
 
 li {
