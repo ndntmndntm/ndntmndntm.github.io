@@ -96,6 +96,10 @@ select {
     background-color: seagreen;
 }
 
+.cloth {
+    background-color: darkturquoise;
+}
+
 li {
     list-style-type: none;
 }
