@@ -119,6 +119,7 @@ function todayIsANewDay() {
     updatePage();
 }
 
+// buttons
 function addCharacter() {
     let name = document.getElementById("name").value.toUpperCase();
     let prof1 = document.getElementById("prof1").value;
@@ -136,6 +137,7 @@ function reset() {
     updatePage();
 }
 
+// util
 function initUI() {
     const id1 = "prof1";
     const id2 = "prof2";
