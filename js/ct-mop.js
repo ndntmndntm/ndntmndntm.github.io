@@ -77,7 +77,7 @@ function makeRemoveButton(k, v) {
         delete states[k];
         updatePage();
     };
-    button.innerHTML = "delete";
+    button.innerHTML = "<span>Delete</span>";
     return button;
 }
 
