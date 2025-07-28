@@ -103,8 +103,8 @@ function makeCheckboxes(k, v) {
         checkbox.setAttribute("class", "ct-checkbox");
         checkbox.checked = iv;
         checkbox.onchange = (event) => checkboxHandler(k, ik, event.currentTarget.checked);
-        checkboxWrapper.appendChild(label);
         checkboxWrapper.appendChild(checkbox);
+        checkboxWrapper.appendChild(label);
         checkboxes.appendChild(checkboxWrapper);
     }
     return checkboxes;
