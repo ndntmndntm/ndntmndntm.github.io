@@ -101,7 +101,7 @@ select {
 .gem:has(> input:checked), .gem-l {
     background: var(--gem-grad);
     color: white;
-    background-clip: border-box;
+    background-clip: content-box;
 }
 
 .transmute {
@@ -113,7 +113,7 @@ select {
 .transmute:has(> input:checked), .transmute-l {
     background: var(--alch-grad);
     color: white;
-    background-clip: border-box;
+    background-clip: content-box;
 }
 
 
@@ -126,7 +126,7 @@ select {
 .scroll:has(> input:checked), .scroll-l {
     background: var(--ins-grad);
     color: white;
-    background-clip: border-box;
+    background-clip: content-box;
 }
 
 .cloth {
@@ -138,7 +138,7 @@ select {
 .cloth:has(> input:checked), .cloth-l {
     background: var(--tailor-grad);
     color: white;
-    background-clip: border-box;
+    background-clip: content-box;
 }
 
 li {
