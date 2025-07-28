@@ -72,6 +72,7 @@ function updateRow(k, v) {
 
 function makeRemoveButton(k, v) {
     let button = document.createElement("button");
+    button.setAttribute("class", "gigabutton");
     button.onclick = () => {
         delete states[k];
         updatePage();
