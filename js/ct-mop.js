@@ -3,7 +3,7 @@ let data = {
     "ins": ["scroll"],
     "jwc": ["gem"],
     "alch": ["transmute"],
-    "tailoring": ["cloth"],
+    "tailor": ["cloth"],
     "none": [],
 }
 
