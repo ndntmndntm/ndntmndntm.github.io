@@ -146,7 +146,8 @@ function initUI() {
 
 window.onload = () => {
     initUI();
-    daily_states = JSON.parse(getCookie(COOKIE_STATES));
+    let cookie_states = getCookie(COOKIE_STATES).trim();
+    if (cookie_states != "") daily_states = JSON.parse();
     if (new Date().toLocaleDateString() != getCookie(COOKIE_DATE)) {
         todayIsANewDay();
     }
