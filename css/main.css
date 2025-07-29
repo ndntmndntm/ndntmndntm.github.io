@@ -126,7 +126,9 @@ button {
     font-size: 24px;
 }
 
-
+nav {
+    background: var(--second-bg-color);
+}
 
 .gem:has(> input:checked),
 .gem-l {
