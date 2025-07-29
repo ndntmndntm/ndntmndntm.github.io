@@ -115,9 +115,9 @@ button {
 
 .nav-div {
     display: flex;
-    justify-content: space-between;
     vertical-align: middle;
     flex-wrap: wrap;
+    padding: 12px;
 }
 
 .gem:has(> input:checked),
