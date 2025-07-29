@@ -1,6 +1,7 @@
 ---
 layout: default
 permalink: /dmf
+title: "DMF"
 ---
 
 | Profession | Item |

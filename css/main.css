@@ -94,6 +94,7 @@ button {
 }
 
 .checkboxes-div {
+    color:chartreuse;
     max-width: 640px;
 }
 
@@ -105,10 +106,18 @@ button {
     block-size: fit-content;
 }
 
+
 .gem {
     background: var(--gem-grad);
     color: transparent;
     background-clip: text;
+}
+
+.nav-div {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    flex-wrap: wrap;
 }
 
 .gem:has(> input:checked),
