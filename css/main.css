@@ -93,6 +93,10 @@ button {
     background-color: var(--second-bg-color);
 }
 
+.checkboxes-div {
+    max-width: 640px;
+}
+
 .gem-l,
 .cloth-l,
 .scroll-l,

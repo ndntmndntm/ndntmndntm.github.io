@@ -94,7 +94,7 @@ function makeNameText(k, v) {
 
 function makeCheckboxes(k, v) {
     let checkboxes = document.createElement("div");
-    checkboxes.setAttribute("class", "wacopy-div");
+    checkboxes.setAttribute("class", "wacopy-div checkboxes-div");
     for (const [ik, iv] of Object.entries(v)) {
         let checkboxWrapper = document.createElement("div");
         checkboxWrapper.setAttribute("class", "ct-checkboxes " + ik);
