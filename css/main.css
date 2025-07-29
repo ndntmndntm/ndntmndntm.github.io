@@ -117,8 +117,16 @@ button {
     display: flex;
     vertical-align: middle;
     flex-wrap: wrap;
-    padding: 12px;
+    gap: 16px;
 }
+.nav-div > a,
+.nav-div > a:visited,
+.nav-div > a:active {
+    color: var(--main-color);
+    font-size: 24px;
+}
+
+
 
 .gem:has(> input:checked),
 .gem-l {
