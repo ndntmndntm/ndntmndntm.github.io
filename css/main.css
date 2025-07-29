@@ -67,24 +67,25 @@ body {
     justify-content: space-between;
     vertical-align: middle;
     flex-wrap: wrap;
-    font-size: 20px;
+    font-size: 18px;
     padding: 2px var(--spacing);
 }
 
 .ct-checkboxes {
     vertical-align: middle;
     border-radius: 5px;
-    padding: 0px 24px;
+    padding: 0px 16px;
 }
 
 .ct-checkbox {
-    --size: 32px;
+    --size: 26px;
     height: var(--size);
     width: var(--size);
 }
 
 input,
-select {
+select,
+button {
     height: 24px;
 }
 
