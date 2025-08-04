@@ -21,26 +21,38 @@ rcd.presets.txt
 reminders.txt
 rogue.txt
 shaman.txt
+Starter Pack.txt
 t14autoswap.txt
 t14customnotes.txt
-uf.txt
+unitframe indicators.txt
 warlock.txt
 warrior.txt`;
 
 const fwapath = "/static/wa/fojji/";
-const fwa = `cd.tracker.txt
-class.anchors.txt
-dk.txt
-druid.txt
-dungeon.mop.txt
-essentials.mop.txt
-hunter.txt
-mage.txt
+const fwa = `boss kill timers.txt
+donkey kong.txt
+dudu.txt
+dungeon pack icons.txt
+dungeon pack.txt
+general cooldown pulse.txt
+general easy talents.txt
+glyph reminders.txt
+glyph talent set reminders.txt
+guild banner rotation.txt
+huntrad.txt
+magus.txt
 monk.txt
+numen core.txt
 paladin.txt
 priest.txt
+raid assigments rl hof.txt
+raid assigments rl msv.txt
+raid assigments rl toes.txt
+raid assigments user.txt
 rogue.txt
-shaman.txt
+set reminders.txt
+shammy.txt
+speedrun timer msv.txt
 warlock.txt
 warrior.txt`;
 
