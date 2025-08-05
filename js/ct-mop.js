@@ -7,6 +7,17 @@ let data = {
     "none": [],
 }
 
+const EXP_HOURS = 3 - new Date().getTimezoneOffset() / 60; // EU
+
+Date.prototype.addHours = function (h) {
+    this.setTime(this.getTime() + (h * 60 * 60 * 1000));
+    return this;
+}
+
+const COOKIE_STATES = "states";
+const COOKIE_DATE = "date";
+const COOKIE_EXPTIME = "exptime";
+
 let listElement = document.getElementById("ct-mop");
 
 let checkboxHandler = (id1, id2, v) => {
@@ -52,9 +63,18 @@ function updatePage() {
     }
 }
 
+function getExpirationTime() {
+    let now = new Date();
+    if (now.getHours() < EXP_HOURS) {
+        return new Date(now.toLocaleDateString()).addHours(EXP_HOURS).getTime();
+    }
+    return new Date(new Date().toLocaleDateString()).addHours(24 + EXP_HOURS).getTime()
+}
+
 function updateCookies() {
-    setCookie("date", new Date().toLocaleDateString(), 365);
-    setCookie("states", JSON.stringify(states), 365);
+    setCookie(COOKIE_DATE, new Date().toLocaleDateString(), 365);
+    setCookie(COOKIE_EXPTIME, getExpirationTime(), 365);
+    setCookie(COOKIE_STATES, JSON.stringify(states), 365);
 }
 
 function updateRow(k, v) {
@@ -172,9 +192,9 @@ function updateStates() {
 
 window.onload = () => {
     initUI();
-    states = JSON.parse(getCookie("states"));
+    states = JSON.parse(getCookie(COOKIE_STATES));
     updateStates();
-    if (new Date().toLocaleDateString() != getCookie("date")) {
+    if (new Date().getTime() > Number(getCookie(COOKIE_EXPTIME))) {
         todayIsANewDay();
     }
     updatePage();

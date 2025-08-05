@@ -1,7 +1,14 @@
 let daily_states = {}
+const EXP_HOURS = 3 - new Date().getTimezoneOffset() / 60; // EU
+
+Date.prototype.addHours = function (h) {
+    this.setTime(this.getTime() + (h * 60 * 60 * 1000));
+    return this;
+}
 
 const COOKIE_STATES = "daily_states";
 const COOKIE_DATE = "daily_date";
+const COOKIE_EXPTIME = "daily_exptime";
 const FACTIONS = [
     "Shado-Pan",
     "Golden Lotus",
@@ -16,6 +23,13 @@ let listElement = document.getElementById("daily-mop");
 let checkboxHandler = (id1, id2, v) => {
     daily_states[id1][id2] = v;
     updatePage();
+}
+function getExpirationTime() {
+    let now = new Date();
+    if (now.getHours() < EXP_HOURS) {
+        return new Date(now.toLocaleDateString()).addHours(EXP_HOURS).getTime();
+    }
+    return new Date(new Date().toLocaleDateString()).addHours(24 + EXP_HOURS).getTime()
 }
 
 function setCookie(cname, cvalue, exdays) {
@@ -59,6 +73,7 @@ function updatePage() {
 
 function updateCookies() {
     setCookie(COOKIE_DATE, new Date().toLocaleDateString(), 365);
+    setCookie(COOKIE_EXPTIME, getExpirationTime(), 365);
     setCookie(COOKIE_STATES, JSON.stringify(daily_states), 365);
 }
 
@@ -148,7 +163,7 @@ window.onload = () => {
     initUI();
     let cookie_states = getCookie(COOKIE_STATES).trim();
     if (cookie_states != "") daily_states = JSON.parse(cookie_states);
-    if (new Date().toLocaleDateString() != getCookie(COOKIE_DATE)) {
+    if (new Date().getTime() > getCookie(COOKIE_EXPTIME)) {
         todayIsANewDay();
     }
     updatePage();
