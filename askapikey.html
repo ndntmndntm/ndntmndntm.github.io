@@ -1,0 +1,26 @@
+---
+layout: default
+permalink: /askapikey
+title: "Enter TSM API key"
+---
+
+<script>
+    const SITE_URL = "https://ndntmndntm.github.io/"
+    const COOKIE_API = "tsm_api_key";
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+
+    function setApiKey() {
+        let key = document.getElementById("api_textfield").textContent.trim();
+        setCookie(COOKIE_API, key, 365);
+        window.location.replace(SITE_URL + "profession-price");
+    }
+</script>
+
+<p>Enter your <a href="https://id.tradeskillmaster.com/realms/app/account/">TSM API key</a> here</p>
+<input type="text" id="api_textfield">
+<button onclick="setApiKey()">Enter</button>

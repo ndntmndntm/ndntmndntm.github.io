@@ -29,7 +29,8 @@ warlock.txt
 warrior.txt`;
 
 const fwapath = "/static/wa/fojji/";
-const fwa = `boss kill timers.txt
+const fwa = `t14msv.txt
+boss kill timers.txt
 donkey kong.txt
 dudu.txt
 dungeon pack icons.txt
