@@ -43,6 +43,7 @@ guild banner rotation.txt
 huntrad.txt
 magus.txt
 monk.txt
+numen cd tracker.txt
 numen core.txt
 paladin.txt
 priest.txt
