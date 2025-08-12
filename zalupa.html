@@ -1,0 +1,15 @@
+---
+layout: default
+permalink: /zalupa
+title: "zalupa"
+---
+
+<ul>
+    {% for post in site.zalupa %}
+    <li>
+        <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.url }}">{{ post.title }}</a>
+        </h2>
+    </li>
+    {% endfor %}
+</ul>

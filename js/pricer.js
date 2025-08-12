@@ -1,4 +1,4 @@
-const TESTK = "r0jQfg7eVfY7uWJaYwBpvNQoyHsVH0Zw";
+
 const SITE_URL = "https://ndntmndntm.github.io/"
 const COOKIE_API = "tsm_api_key";
 const TSM_AUTH = "https://auth.tradeskillmaster.com/oauth2/token";
