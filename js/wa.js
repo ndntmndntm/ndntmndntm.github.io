@@ -3,30 +3,33 @@ let WA = {};
 let filenames = []
 let loaded = 0;
 const mwapath = "/static/wa/merfin/";
-const mwa = `anchors.txt
-dk.txt
-druid.txt
-general.txt
-hunter.txt
-hunterpets.txt
-mage.txt
-monk.txt
-paladin.txt
-priest.txt
-raidcore.txt
-raidwidgets.txt
-rcd.backend.txt
-rcd.empty.patterns.txt
-rcd.presets.txt
-reminders.txt
-rogue.txt
-shaman.txt
+const mwa = `Banner Manager.txt
+Death Knight (Full HD 1920-1080px).txt
+Druid (Full HD 1920-1080px).txt
+DungeonQueWidget.txt
+Equipped Items.txt
+Gear Check Helper.txt
+General (All in 1).txt
+Hunter (Full HD 1920-1080px).txt
+Hunter Easy Pets.txt
+I cba tinkers.txt
+Mage (Full HD 1920-1080px).txt
+MerfinUI Anchors (Full HD).txt
+Mogushan Vaults Extra.txt
+Monk (Full HD 1920-1080px).txt
+Priest (Full HD 1920-1080px).txt
+RCD Backend.txt
+RCD Presets.txt
+Shaman (Full HD 1920-1080px).txt
 Starter Pack.txt
-t14autoswap.txt
-t14customnotes.txt
-unitframe indicators.txt
-warlock.txt
-warrior.txt`;
+Stormlash Manager.txt
+Talents&Glyphs.txt
+TalentsGlyphs Reminder.txt
+Unit Frames Indicators.txt
+Warlock (Full HD 1920-1080px).txt
+Warrior (Full HD 1920-1080px).txt
+[Merfin] MRT T14 Auto Swap.txt
+[Merfin] MRT T14 Custom Notes.txt`;
 
 const fwapath = "/static/wa/fojji/";
 const fwa = `t14msv.txt
