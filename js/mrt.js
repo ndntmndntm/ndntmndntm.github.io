@@ -67,7 +67,7 @@ function updateRow(k, v) {
 }
 
 function makeArrowText(k, v) {
-    let p = document.createAttribute("p");
+    let p = document.createElement("p");
     p.innerHTML = "=>";
     return p;
 }
