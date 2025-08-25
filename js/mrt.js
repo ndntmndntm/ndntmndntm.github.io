@@ -2,7 +2,8 @@ let names_list = document.getElementById("mrt_names");
 let note_textarea = document.getElementById("mrt_note");
 let result_textarea = document.getElementById("mrt_result");
 
-let mrt_states = {};
+let mrt_states = {
+};
 
 function setCookie(cname, cvalue, exdays) {
     const d = new Date();
@@ -30,8 +31,8 @@ function getCookie(cname) {
 function updatePage() {
     names_list.innerHTML = "";
     saveMRTStates();
-    if (!mrt_states["player"]) {
-        mrt_states["player"] = {};
+    if (!mrt_states["players"]) {
+        mrt_states["players"] = {};
     }
     if (mrt_states != {} && mrt_states["players"] != {}) {
         for (const [k, v] of Object.entries(mrt_states["players"])) {
@@ -41,10 +42,10 @@ function updatePage() {
 }
 let counter = 0;
 function addNewPlayer() {
-    if (!mrt_states["player"]) {
-        mrt_states["player"] = {};
+    if (!mrt_states["players"]) {
+        mrt_states["players"] = {};
     }
-    mrt_states["player"][new Date().getTime()] = {
+    mrt_states["players"][new Date().getTime()] = {
         "name": "NAME",
         "spec": "SPEC"
     }
