@@ -111,6 +111,6 @@ window.onload = () => {
     let mrtCookie = getCookie("mrt");
     if (mrtCookie == "") mrtCookie = "{}";
     mrt_states = JSON.parse(mrtCookie);
-    names_list.value = mrt_states["players"];
+    updatePage();
     note_textarea.value = mrt_states["note"];
 }
