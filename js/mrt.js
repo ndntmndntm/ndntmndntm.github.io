@@ -78,13 +78,13 @@ function makeRemoveButton(k, v) {
 }
 
 function makeNameText(k, v) {
-    let p = document.createElement("p");
+    let p = document.createElement("input");
     p.innerHTML = v["name"];
     p.onchange = (event) => v["name"] = event.target.value;
     return p;
 }
 function makeSpecText(k, v) {
-    let p = document.createElement("p");
+    let p = document.createElement("input");
     p.innerHTML = v["spec"];
     p.onchange = (event) => v["spec"] = event.target.value;
     return p;
