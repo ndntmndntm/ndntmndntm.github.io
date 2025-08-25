@@ -102,11 +102,10 @@ function saveMRTStates() {
 }
 
 function MRTGenerate() {
-    let names = JSON.parse("" + names_list.value);
     let note = note_textarea.value;
 
     saveMRTStates();
-    for (const [key, value] of Object.entries(names)) {
+    for (const [key, value] of Object.entries(mrt_states["players"])) {
         console.log(key, value);
         note = note.replaceAll(key, value);
     }
