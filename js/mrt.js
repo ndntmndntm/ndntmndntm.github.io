@@ -104,12 +104,12 @@ function saveMRTStates() {
 function MRTGenerate() {
     let note = note_textarea.value;
 
-    saveMRTStates();
     for (const [key, value] of Object.entries(mrt_states["players"])) {
         console.log(key, value);
         note = note.replaceAll(value["name"], value["spec"]);
     }
     result_textarea.value = note;
+    saveMRTStates();
 }
 
 function MRTCopy() {
