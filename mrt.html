@@ -6,15 +6,15 @@ title: "MRT note name replacer"
 <div>
     <h1>Players</h1>
     <p>Enter player names in proper format</p>
-    <textarea id="mrt_names">
+    <textarea id="mrt_names" rows="40" cols="60">
 {
     "Warrior1": "Клейсади",
     "Warrior2": "Дархлан",
     "Warrior3": "Варбрис",
-    "Warrior4": "Блэйдн", # доп варчик
+    "Warrior4": "Блэйдн",
     "DK1": "Параграм",
     "DK2": "Брызгильда",
-    "DK3": "", # Дэззман
+    "DK3": "",
     "DShaman1": "",
     "DShaman2": "",
     "DShaman3": "",
@@ -29,17 +29,19 @@ title: "MRT note name replacer"
     "Priest2": "Эладнар",
     "Priest3": "",
     "RShaman1": "Няперсик",
-    "RShaman2": "Эрвион", 
-    "MWMonk1": "Позикз", # Килинара
+    "RShaman2": "Эрвион",
+    "MWMonk1": "Позикз"
 }
     </textarea>
 </div>
 <div>
     <h1>Note</h1>
     <p>Enter note where you wanna replace specs with names</p>
-    <textarea id="mrt_note"></textarea>
+    <textarea id="mrt_note" rows="40" cols="60"></textarea>
 </div>
-<script src="{{ "js/mrt.js" | prepend: site.url}}"></script>
+<script src="{{ " js/mrt.js" | prepend: site.url}}"></script>
 <button id="mrt_generate" onclick="MRTGenerate()">Generate</button>
-<textarea id="mrt_result" readonly></textarea>
-<button id="mrt_copy" onclick="MRTCopy()">Copy</button>
+<div>
+    <textarea id="mrt_result" readonly rows="40" cols="60"></textarea>
+    <button id="mrt_copy" onclick="MRTCopy()">Copy</button>
+</div>

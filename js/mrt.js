@@ -3,7 +3,7 @@ let note_textarea = document.getElementById("mrt_note");
 let result_textarea = document.getElementById("mrt_result");
 
 function MRTGenerate() {
-    let names = JSON.parse(names_textarea.textContent);
+    let names = JSON.parse("" + names_textarea.textContent);
     let note = note_textarea.textContent;
 
     for (const [key, value] of Object.entries(names)) {
