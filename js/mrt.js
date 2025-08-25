@@ -9,7 +9,7 @@ function MRTGenerate() {
     for (const [key, value] of Object.entries(names)) {
         note = note.replaceAll(key, value);
     }
-    result_textarea.value = note;
+    result_textarea.innerText = note;
 }
 
 function MRTCopy() {
