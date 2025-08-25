@@ -38,9 +38,8 @@ function updatePage() {
 }
 let counter = 0;
 function addNewPlayer() {
-    if (mrt_states == {}) {
+    if (!mrt_states["player"]) {
         mrt_states["player"] = {};
-        
     }
     mrt_states["player"][new Date().getTime()] = {
         "name": "NAME",
@@ -109,7 +108,9 @@ function MRTCopy() {
 }
 
 window.onload = () => {
-    mrt_states = JSON.parse(getCookie("mrt"));
+    let mrtCookie = getCookie("mrt");
+    if (mrtCookie == "") mrtCookie = "{}";
+    mrt_states = JSON.parse(mrtCookie);
     names_list.value = mrt_states["players"];
     note_textarea.value = mrt_states["note"];
 }
