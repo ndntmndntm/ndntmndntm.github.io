@@ -30,6 +30,9 @@ function getCookie(cname) {
 function updatePage() {
     names_list.innerHTML = "";
     saveMRTStates();
+    if (!mrt_states["player"]) {
+        mrt_states["player"] = {};
+    }
     if (mrt_states != {} && mrt_states["players"] != {}) {
         for (const [k, v] of Object.entries(mrt_states["players"])) {
             updateRow(k, v);
