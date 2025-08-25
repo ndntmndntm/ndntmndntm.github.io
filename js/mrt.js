@@ -56,6 +56,7 @@ function updateRow(k, v) {
     let item = document.createElement("div");
     item.setAttribute("class", "wacopy-div");
     item.appendChild(makeNameText(k, v));
+    item.appendChild(makeArrowText(k, v));
     item.appendChild(makeSpecText(k, v));
     item.appendChild(makeRemoveButton(k, v));
 
@@ -65,6 +66,11 @@ function updateRow(k, v) {
     names_list.appendChild(wrapper);
 }
 
+function makeArrowText(k, v) {
+    let p = document.createAttribute("p");
+    p.innerHTML = "=>";
+    return p;
+}
 
 function makeRemoveButton(k, v) {
     let button = document.createElement("button");
@@ -79,13 +85,13 @@ function makeRemoveButton(k, v) {
 
 function makeNameText(k, v) {
     let p = document.createElement("input");
-    p.innerHTML = v["name"];
+    p.value = v["name"];
     p.onchange = (event) => v["name"] = event.target.value;
     return p;
 }
 function makeSpecText(k, v) {
     let p = document.createElement("input");
-    p.innerHTML = v["spec"];
+    p.value = v["spec"];
     p.onchange = (event) => v["spec"] = event.target.value;
     return p;
 }
