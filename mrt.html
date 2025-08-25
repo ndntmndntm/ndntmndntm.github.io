@@ -6,7 +6,7 @@ title: "MRT note name replacer"
 <div>
     <h1>Players</h1>
     <p>Enter player names in proper format</p>
-    <textarea id="mrt_names" rows="40" cols="60">
+    <textarea id="mrt_names" rows="20" cols="100">
 {
     "Warrior1": "Клейсади",
     "Warrior2": "Дархлан",
@@ -37,11 +37,11 @@ title: "MRT note name replacer"
 <div>
     <h1>Note</h1>
     <p>Enter note where you wanna replace specs with names</p>
-    <textarea id="mrt_note" rows="40" cols="60"></textarea>
+    <textarea id="mrt_note" rows="40" cols="100"></textarea>
 </div>
-<script src="{{ " js/mrt.js" | prepend: site.url}}"></script>
+<script src="{{ "js/mrt.js" | prepend: site.url}}"></script>
 <button id="mrt_generate" onclick="MRTGenerate()">Generate</button>
 <div>
-    <textarea id="mrt_result" readonly rows="40" cols="60"></textarea>
+    <textarea id="mrt_result" readonly rows="40" cols="100"></textarea>
     <button id="mrt_copy" onclick="MRTCopy()">Copy</button>
 </div>
