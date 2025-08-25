@@ -13,5 +13,5 @@ function MRTGenerate() {
 }
 
 function MRTCopy() {
-    navigator.clipboard.writeText(note);
+    navigator.clipboard.writeText(result_textarea.textContent);
 }
