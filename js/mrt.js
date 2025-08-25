@@ -36,6 +36,13 @@ function updatePage() {
         }
     }
 }
+let counter = 0;
+function addNewPlayer() {
+    mrt_states["player"][new Date().getTime()] = {
+        "name": "NAME",
+        "spec": "SPEC"
+    }
+}
 
 function updateRow(k, v) {
     let item = document.createElement("div");
