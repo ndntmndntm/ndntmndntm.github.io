@@ -38,10 +38,15 @@ function updatePage() {
 }
 let counter = 0;
 function addNewPlayer() {
+    if (mrt_states == {}) {
+        mrt_states["player"] = {};
+        
+    }
     mrt_states["player"][new Date().getTime()] = {
         "name": "NAME",
         "spec": "SPEC"
     }
+    updatePage();
 }
 
 function updateRow(k, v) {
