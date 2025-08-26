@@ -4,6 +4,8 @@ let data = {
     "jwc": ["gem"],
     "alch": ["transmute"],
     "tailor": ["cloth"],
+    "lw": ["kozha"],
+    "ench": ["purpul kristal"],
     "none": [],
 }
 
