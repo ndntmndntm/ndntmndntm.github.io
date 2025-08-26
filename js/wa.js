@@ -17,9 +17,11 @@ Mage (Full HD 1920-1080px).txt
 MerfinUI Anchors (Full HD).txt
 Mogushan Vaults Extra.txt
 Monk (Full HD 1920-1080px).txt
+Paladin (Full HD 1920-1080px).txt
 Priest (Full HD 1920-1080px).txt
 RCD Backend.txt
 RCD Presets.txt
+Rogue (Full HD 1920-1080px).txt
 Shaman (Full HD 1920-1080px).txt
 Starter Pack.txt
 Stormlash Manager.txt
