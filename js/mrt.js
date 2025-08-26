@@ -28,6 +28,21 @@ function getCookie(cname) {
     return "";
 }
 
+function importMRT() {
+    let mrt_string = prompt("Enter exported MRT stirng (don't use MRT export string)");
+    console.log(mrt_string);
+    let mrt_groups = mrt_string.replaceAll("\n", " ").replaceAll("\t", " ").replaceAll("  ", " ").trim().split(" ");
+    let count = 0;
+    for (p of mrt_groups) {
+        if (p != "") {
+            mrt_states["players"][count++] = {
+                "name": p,
+                "spec": "SPEC"
+            }
+        }
+    }
+}
+
 function updatePage() {
     names_list.innerHTML = "";
     saveMRTStates();
@@ -55,9 +70,9 @@ function addNewPlayer() {
 function updateRow(k, v) {
     let item = document.createElement("div");
     item.setAttribute("class", "wacopy-div");
-    item.appendChild(makeNameText(k, v));
-    item.appendChild(makeArrowText(k, v));
     item.appendChild(makeSpecText(k, v));
+    item.appendChild(makeArrowText(k, v));
+    item.appendChild(makeNameText(k, v));
     item.appendChild(makeRemoveButton(k, v));
 
     let wrapper = document.createElement("li");
@@ -106,7 +121,7 @@ function MRTGenerate() {
 
     for (const [key, value] of Object.entries(mrt_states["players"])) {
         console.log(key, value);
-        note = note.replaceAll(value["name"], value["spec"]);
+        note = note.replaceAll(value["spec"], value["name"]);
     }
     result_textarea.value = note;
     saveMRTStates();
