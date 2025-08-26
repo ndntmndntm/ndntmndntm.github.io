@@ -120,6 +120,6 @@ window.onload = () => {
     let mrtCookie = getCookie("mrt");
     if (mrtCookie == "") mrtCookie = "{}";
     mrt_states = JSON.parse(mrtCookie);
-    updatePage();
     note_textarea.value = mrt_states["note"];
+    updatePage();
 }
