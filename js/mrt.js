@@ -41,6 +41,7 @@ function importMRT() {
             }
         }
     }
+    updatePage();
 }
 
 function updatePage() {
