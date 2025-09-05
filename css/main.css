@@ -93,15 +93,24 @@ button {
     background-color: #FF0066;
     border: solid #FF0066 2px;
     color: white;
-    transition: all 1s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 .import_wa {
     background-color: #1E93AB;
     border: solid #1E93AB 2px;
     color: white;
-    transition: all 1s ease-out;
+    transition: all 0.3s ease-out;
 }
+#mrt_generate, #mrt_copy, #mrt_add {
+    background-color: #67C090;
+    border: solid #67C090 2px;
+    color: white;
+    transition: all 0.3s ease-out;
+}
+#mrt_generate:hover,
+#mrt_copy:hover,
+#mrt_add:hover,
 .import_mrt:hover,
 .import_wa:hover {
     background-color: var(--main-bg-color);
