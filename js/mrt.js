@@ -29,7 +29,7 @@ function getCookie(cname) {
 }
 
 function importMRT() {
-    let mrt_string = prompt("Enter exported MRT stirng (don't use MRT export string)");
+    let mrt_string = prompt("Enter exported MRT roster (don't use MRT export string)");
     console.log(mrt_string);
     let mrt_groups = mrt_string.replaceAll("\n", " ").replaceAll("\t", " ").replaceAll("  ", " ").trim().split(" ");
     let count = 0;
@@ -43,6 +43,28 @@ function importMRT() {
     }
     updatePage();
 }
+
+function importWA() {
+    let wa_string = prompt("Enter exported WA roster").trim();
+    console.log(wa_string);
+    if (wa_string[0] != "!") {
+        alert("Error?");
+        return;
+    }
+    wa_string = wa_string.substring(1).trim();
+    let wa_groups = wa_string.replaceAll("\n", " ").replaceAll("\t", " ").replaceAll("  ", " ").trim().split(" ");
+    let count = 0;
+    for (g of wa_groups) {
+        if (g) {
+            let [spec, name] = g.split("=");
+            mrt_states["players"][count++] = {
+                "name": name,
+                "spec": spec
+            }
+        }
+    }
+}
+
 
 function updatePage() {
     names_list.innerHTML = "";
