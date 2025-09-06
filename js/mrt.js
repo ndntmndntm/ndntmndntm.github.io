@@ -151,6 +151,28 @@ function MRTGenerate() {
     saveMRTStates();
 }
 
+function MRTGigaGenerate() {
+
+    let note = note_textarea.value;
+    
+    let spell = /{spell:\d*}/;
+    for (const [key, value] of Object.entries(mrt_states["players"])) {
+        console.log(key, value);
+        let pos;
+        while ((pos = note.search(value["spec"])) != -1) {
+            let t = note.replace(value["spec"], `\{p:${value["name"]}} ${value["name"]}`);
+            let next = note.slice(pos).search(spell);
+            let len = note.slice(pos).match(spell)[0].length;
+            t = t.slice(0, next + len) + "{/p}" + t.slice(next + len);
+            note = t;
+        }
+    }
+    result_textarea.value = note;
+    saveMRTStates();
+}
+
+
+
 function MRTCopy() {
     navigator.clipboard.writeText(result_textarea.textContent);
 }
