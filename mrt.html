@@ -24,10 +24,14 @@ title: "MRT note name replacer"
     <textarea id="mrt_note" rows="10" cols="100"></textarea>
 </div>
 <button id="mrt_generate" onclick="MRTGenerate()">Generate</button>
-<button id="mrt_gigagenerate" onclick="MRTGigaGenerate()">giga Generate (only for notes with "SPEC SPELL" assignments)</button>
+<button id="mrt_gigagenerate" onclick="MRTGigaGenerate()">giga Generate (only for notes with "SPEC SPELL"
+    assignments)</button>
+<input type="checkbox" name="cleanup_check" id="cleanup_check">
+<label for="cleanup_check">Clean unused specs (removes anything between /[A-Z][a-zA-Z]+[0-9]/ (spec name and number)
+    regexp and /{spell:\d*}/ (spell assignment) regexp)</label>
 <div>
     <h1>Generated note</h1>
     <textarea id="mrt_result" rows="10" cols="100"></textarea>
 </div>
 <button id="mrt_copy" onclick="MRTCopy()">Copy</button>
-<script src="{{ "js/mrt.js" | prepend: site.url}}"></script>
+<script src="{{ " js/mrt.js" | prepend: site.url}}"></script>

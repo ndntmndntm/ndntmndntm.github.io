@@ -1,7 +1,11 @@
 let names_list = document.getElementById("mrt_names");
 let note_textarea = document.getElementById("mrt_note");
 let result_textarea = document.getElementById("mrt_result");
-
+let cleanup_checkbox = document.getElementById("cleanup_check");
+let cleanup = false;
+cleanup_checkbox.onchange = (e) => {
+    cleanup = e.currentTarget.checked;
+}
 let mrt_states = {
 };
 
@@ -160,7 +164,7 @@ function MRTGenerate() {
         console.log(key, value);
         note = note.replaceAll(value["spec"], value["name"]);
     }
-    result_textarea.value = CleanUnused(note);
+    result_textarea.value = cleanup ? CleanUnused(note) : note;
     saveMRTStates();
 }
 
@@ -182,7 +186,7 @@ function MRTGigaGenerate() {
             note = t;
         }
     }
-    result_textarea.value = CleanUnused(note);
+    result_textarea.value = cleanup ? CleanUnused(note) : note;
     saveMRTStates();
 }
 
