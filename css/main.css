@@ -96,7 +96,7 @@ button {
     transition: all 0.3s ease-out;
 }
 
-.import_wa {
+.import_wa, #mrt_gigagenerate {
     background-color: #1E93AB;
     border: solid #1E93AB 2px;
     color: white;
@@ -112,7 +112,8 @@ button {
 #mrt_copy:hover,
 #mrt_add:hover,
 .import_mrt:hover,
-.import_wa:hover {
+.import_wa:hover,
+#mrt_gigagenerate:hover {
     background-color: var(--main-bg-color);
     
 }
