@@ -148,7 +148,7 @@ function CleanUnused(txt) {
         let next = txt.slice(p.index).search(spell);
         let len = txt.slice(p.index).match(spell)[0].length;
         let end = next + len + p.index;
-        txt = txt.slice(0, p) + t.slice(end);
+        txt = txt.slice(0, p) + txt.slice(end);
     }
     return txt;
 }
