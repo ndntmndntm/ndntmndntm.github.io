@@ -141,7 +141,7 @@ function saveMRTStates() {
 }
 
 function CleanUnused(txt) {
-    let unusedSpecRE = /[A-Z][a-zA-Z]*[0-9]/;
+    let unusedSpecRE = /[A-Z][a-zA-Z]+[0-9]/;
     let spell = /{spell:\d*}/;
     let p;
     while ((p = unusedSpecRE.exec(txt)) != null) {
