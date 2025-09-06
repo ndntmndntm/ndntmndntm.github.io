@@ -157,14 +157,13 @@ function MRTGigaGenerate() {
     
     let spell = /{spell:\d*}/;
     for (const [key, value] of Object.entries(mrt_states["players"])) {
-        console.log(key, value);
         let pos;
         while ((pos = note.search(value["spec"])) != -1) {
             let tag = `\{p:${value["name"]}} ${value["name"]}`;
             let t = note.replace(value["spec"], tag);
             let tpos = pos + tag.length - value["spec"].length;
-            let next = t.slice(pos).search(spell);
-            let len = t.slice(pos).match(spell)[0].length;
+            let next = t.slice(tpos).search(spell);
+            let len = t.slice(tpos).match(spell)[0].length;
             t = t.slice(0, next + len) + "{/p}" + t.slice(next + len);
             note = t;
         }
