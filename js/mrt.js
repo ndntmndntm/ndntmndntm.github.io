@@ -140,6 +140,19 @@ function saveMRTStates() {
     setCookie("mrt", JSON.stringify(mrt_states));
 }
 
+function CleanUnused(txt) {
+    let unusedSpecRE = /[A-Z][a-zA-Z]*[0-9]/;
+    let spell = /{spell:\d*}/;
+    let p;
+    while ((p = unusedSpecRE.exec(txt)) != null) {
+        let next = txt.slice(p.index).search(spell);
+        let len = txt.slice(p.index).match(spell)[0].length;
+        let end = next + len + p.index;
+        txt = txt.slice(0, p) + t.slice(end);
+    }
+    return txt;
+}
+
 function MRTGenerate() {
     let note = note_textarea.value;
 
@@ -147,14 +160,14 @@ function MRTGenerate() {
         console.log(key, value);
         note = note.replaceAll(value["spec"], value["name"]);
     }
-    result_textarea.value = note;
+    result_textarea.value = CleanUnused(note);
     saveMRTStates();
 }
 
 function MRTGigaGenerate() {
 
     let note = note_textarea.value;
-    
+
     let spell = /{spell:\d*}/;
     for (const [key, value] of Object.entries(mrt_states["players"])) {
         let pos;
@@ -169,7 +182,7 @@ function MRTGigaGenerate() {
             note = t;
         }
     }
-    result_textarea.value = note;
+    result_textarea.value = CleanUnused(note);
     saveMRTStates();
 }
 
