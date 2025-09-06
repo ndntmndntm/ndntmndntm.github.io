@@ -164,7 +164,8 @@ function MRTGigaGenerate() {
             let tpos = pos + tag.length - value["spec"].length;
             let next = t.slice(tpos).search(spell);
             let len = t.slice(tpos).match(spell)[0].length;
-            t = t.slice(0, next + len) + "{/p}" + t.slice(next + len);
+            let idx = next + len + tpos;
+            t = t.slice(0, idx) + "{/p}" + t.slice(idx);
             note = t;
         }
     }
